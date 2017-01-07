@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecaster</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script rel="javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="topWrapper">
+            <div id="map"></div>
+            <div id="selectionDiv">
+                
+                <p>Welcome to Closed Weather App! Here you can access weather information from a JSON file. Please select the information you require below:</p>
+
+                Pressure: <input type="checkbox" id="pressureBox" onclick="checkShow('pressureBox', 'pressureDiv');">
+                Humidity: <input type="checkbox" id="humidityBox" onclick="checkShow('humidityBox', 'humidityDiv');">
+                Windspeed: <input type="checkbox" id="windspeedBox" onclick="checkShow('windspeedBox', 'windspeedDiv');">
+                
+                <form>
+                    Number of Days: 
+                    <select id="daySelect" name="days">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </form>
+                <br>
+
+                <button onclick="jsonParser(); showInfo('weatherInfo'); hideInfo('detailedInfo');">Submit</button>
+            </div>
+        </div>
+        <div id="weatherInfo"></div>
+        <div id="detailedInfo">
+            <div id="chart_div" style="height: 300px; width: 100%;"></div>
+            <div id="detailedExtra"></div>
+        </div>
+        
+    </div>
+    
+    <!--I don't know why this script needs to be in the body instead of the head, but it won't run otherwise-->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+</body>
+</html>
