@@ -1,3 +1,1 @@
-For this project I decided to work on functionality first, and focus on design afterwards. I now think that this approach was somewhat of a misstep. If I had focused on design first, I feel as if I could have made a much sleeker and more visually pleasing application. In any case, I feel as if I have achieved what was asked in this assignment, and I am happy with how my JavaScript code functions. 
-
-To go beyond the basic requirements I thought it would be fun to play around with some data visualisation techniques. I used the google charts API to plot the temperature given in the Detailed.json file across a given day. 
+This is a simple weather app build in HTML, CSS and JavaScript, built for a university assignment. 
